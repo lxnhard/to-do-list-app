@@ -34,3 +34,11 @@ function newItem(){
   $('#list').sortable();
 
 }
+
+// Enter key to submit item
+$(document).on("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    newItem();
+  }
+})
